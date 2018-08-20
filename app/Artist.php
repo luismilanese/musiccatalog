@@ -12,4 +12,9 @@ class Artist extends Model
     {
         return $this->belongsToMany(Album::class);
     }
+
+    public function addAlbum(string $name)
+    {
+        $this->albums()->create(compact('name'));
+    }
 }
