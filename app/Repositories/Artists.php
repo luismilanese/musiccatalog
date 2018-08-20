@@ -9,6 +9,8 @@ class Artists
     {
         return Artist::with(['albums' => function($query) {
             $query->orderBy('name', 'asc');
-        }])->orderBy('name', 'asc')->get();
+        }])
+            ->orderBy('name', 'asc')
+            ->get();
     }
 }
